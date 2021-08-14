@@ -17,6 +17,7 @@ CLASS_NAMES = np.array([["i", "I"],
                ["ix", "IX"],
                ["x", "X"]])
 
+
 def glob_files(path, extension='*'):
     search_string = os.path.join(path, extension)
     files = glob.glob(search_string)
@@ -35,6 +36,7 @@ def glob_files(path, extension='*'):
 
     return paths
 
+
 def create_text_image(text, out_filename, font_file,
                       start_x=100, start_y=30, font_size=200, w=300, h=300):
     image = Image.new('RGB', (w, h), color=(255, 255, 255))
@@ -43,6 +45,7 @@ def create_text_image(text, out_filename, font_file,
     d.text((start_x, start_y), text, font=font, fill=(0, 0, 0))
     image.save(out_filename)
     # print(text, out_filename, font_file)
+
 
 def create_text_images(font_folder, out_folder):
     font_files = glob_files(font_folder, "*.ttc")
@@ -58,6 +61,7 @@ def create_text_images(font_folder, out_folder):
             out_filename = os.path.join(out_sub_folder, num2 + "_2-" + os.path.basename(font_file))
             # print(out_filename)
             create_text_image(num2, out_filename + ".jpg", font_file)
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
