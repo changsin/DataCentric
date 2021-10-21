@@ -8,4 +8,5 @@ The strategies that I am trying are:
 2. Cleanup: DONE
 3. Augment and rebalance train/val/test datasets
 
-
+The winners are announced and their methodologies are shared in blogs:
+[DeepLearning.ai blogs on Data Centric AI Competition](https://www.deeplearning.ai/data-centric-ai-competition-synaptic-ann/)
